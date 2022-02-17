@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  width: 100vw;
+  height: 100vh;
+}
+#slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#slider-container .left-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+#slider-container .left-slide > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#slider-container .left-slide > div h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 1rem 0;
+  color: #f0f0f0;
+}
+#slider-container .left-slide > div p {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+#slider-container .right-slide {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+#slider-container .right-slide > div:first-child {
+  background-image: url('./images/eagle.jfif');
+}
+#slider-container .right-slide > div:nth-child(2) {
+  background-image: url('./images/castle.jfif');
+}
+#slider-container .right-slide > div:nth-child(3) {
+  background-image: url('./images/sky\ blue.jfif');
+}
+#slider-container .right-slide > div:last-child {
+  background-image: url('./images/flowers.jfif');
+}
+#slider-container .right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+#slider-container .action-button {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  z-index: 100;
+}
+#slider-container .action-button button {
+  border: none;
+  background-color: #f0f0f0;
+  color: #242424;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+#slider-container .action-button button:focus {
+  outline: none;
+}
+#slider-container .action-button button:hover {
+  background-color: #242424;
+  color: #f0f0f0;
+}
+#slider-container .action-button .down-btn {
+  transform: translateX(-100%);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+#slider-container .action-button .up-btn {
+  transform: translate(-120%, -100%);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
